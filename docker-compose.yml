@@ -1,0 +1,25 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    image: loanscore-backend
+    container_name: loanscore-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=development
+    volumes:
+      - ./data:/app/data
+      - ./ml/artifacts:/app/ml/artifacts
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    image: loanscore-frontend
+    container_name: loanscore-frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend

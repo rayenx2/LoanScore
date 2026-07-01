@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+
+# Environment
+.env
+.env.*
+!.env.example
+!frontend/.env.example
+
+# Frontend
+node_modules/
+dist/
+.vite/
+
+# Data and model artifacts
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+*.pkl
+*.joblib
+*.onnx
+ml/artifacts/test_*/
+!ml/artifacts/model.pkl
+!ml/artifacts/preprocessor.pkl
+!ml/artifacts/metrics.json
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Local dev server logs
+backend-server*.log
+frontend-dev*.log
+
+# Test-generated reports
+reports/test_*/

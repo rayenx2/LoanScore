@@ -1,0 +1,565 @@
+{
+  "generated_at": "2026-07-01T19:10:57.422076+00:00",
+  "executive_summary": "Model health is Critical with a score of 27/100. 5 features show high drift, and 19.0% of production applicants are predicted high risk. Retraining priority is High.",
+  "model_status": "Critical",
+  "model_health_score": 27,
+  "model_metrics": {
+    "model_version": "credit-risk-mvp-v1",
+    "selected_model": "random_forest",
+    "selection_metric": "roc_auc_then_f1_score",
+    "training_rows": 800,
+    "test_rows": 200,
+    "models": {
+      "logistic_regression": {
+        "accuracy": 0.775,
+        "precision": 0.6596,
+        "recall": 0.5167,
+        "f1_score": 0.5794,
+        "roc_auc": 0.7948,
+        "confusion_matrix": [
+          [
+            124,
+            16
+          ],
+          [
+            29,
+            31
+          ]
+        ],
+        "roc_curve": [
+          {
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "x": 0.0071,
+            "y": 0.05
+          },
+          {
+            "x": 0.0286,
+            "y": 0.1667
+          },
+          {
+            "x": 0.0429,
+            "y": 0.1833
+          },
+          {
+            "x": 0.05,
+            "y": 0.3167
+          },
+          {
+            "x": 0.0786,
+            "y": 0.35
+          },
+          {
+            "x": 0.1,
+            "y": 0.4
+          },
+          {
+            "x": 0.1143,
+            "y": 0.45
+          },
+          {
+            "x": 0.1643,
+            "y": 0.55
+          },
+          {
+            "x": 0.1786,
+            "y": 0.6167
+          },
+          {
+            "x": 0.1857,
+            "y": 0.65
+          },
+          {
+            "x": 0.2071,
+            "y": 0.6667
+          },
+          {
+            "x": 0.2143,
+            "y": 0.6833
+          },
+          {
+            "x": 0.2857,
+            "y": 0.7
+          },
+          {
+            "x": 0.3,
+            "y": 0.7333
+          },
+          {
+            "x": 0.3143,
+            "y": 0.8
+          },
+          {
+            "x": 0.3714,
+            "y": 0.8167
+          },
+          {
+            "x": 0.3929,
+            "y": 0.8333
+          },
+          {
+            "x": 0.4286,
+            "y": 0.85
+          },
+          {
+            "x": 0.4643,
+            "y": 0.8667
+          },
+          {
+            "x": 0.55,
+            "y": 0.9
+          },
+          {
+            "x": 0.6071,
+            "y": 0.95
+          },
+          {
+            "x": 0.7643,
+            "y": 0.9667
+          },
+          {
+            "x": 0.8429,
+            "y": 0.9833
+          },
+          {
+            "x": 1.0,
+            "y": 1.0
+          }
+        ],
+        "pr_curve": [
+          {
+            "x": 1.0,
+            "y": 0.3
+          },
+          {
+            "x": 1.0,
+            "y": 0.3125
+          },
+          {
+            "x": 1.0,
+            "y": 0.3279
+          },
+          {
+            "x": 0.9833,
+            "y": 0.3371
+          },
+          {
+            "x": 0.9667,
+            "y": 0.3473
+          },
+          {
+            "x": 0.95,
+            "y": 0.3608
+          },
+          {
+            "x": 0.95,
+            "y": 0.38
+          },
+          {
+            "x": 0.95,
+            "y": 0.4014
+          },
+          {
+            "x": 0.9,
+            "y": 0.406
+          },
+          {
+            "x": 0.8833,
+            "y": 0.424
+          },
+          {
+            "x": 0.8667,
+            "y": 0.4444
+          },
+          {
+            "x": 0.8333,
+            "y": 0.463
+          },
+          {
+            "x": 0.8,
+            "y": 0.48
+          },
+          {
+            "x": 0.8,
+            "y": 0.5217
+          },
+          {
+            "x": 0.7167,
+            "y": 0.5181
+          },
+          {
+            "x": 0.6833,
+            "y": 0.5467
+          },
+          {
+            "x": 0.65,
+            "y": 0.5821
+          },
+          {
+            "x": 0.5833,
+            "y": 0.6034
+          },
+          {
+            "x": 0.55,
+            "y": 0.66
+          },
+          {
+            "x": 0.45,
+            "y": 0.6429
+          },
+          {
+            "x": 0.35,
+            "y": 0.6364
+          },
+          {
+            "x": 0.3,
+            "y": 0.72
+          },
+          {
+            "x": 0.1833,
+            "y": 0.6471
+          },
+          {
+            "x": 0.1,
+            "y": 0.75
+          },
+          {
+            "x": 0.0,
+            "y": 1.0
+          }
+        ]
+      },
+      "random_forest": {
+        "accuracy": 0.755,
+        "precision": 0.7037,
+        "recall": 0.3167,
+        "f1_score": 0.4368,
+        "roc_auc": 0.821,
+        "confusion_matrix": [
+          [
+            132,
+            8
+          ],
+          [
+            41,
+            19
+          ]
+        ],
+        "roc_curve": [
+          {
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "x": 0.0143,
+            "y": 0.0667
+          },
+          {
+            "x": 0.0214,
+            "y": 0.1
+          },
+          {
+            "x": 0.0286,
+            "y": 0.3
+          },
+          {
+            "x": 0.0714,
+            "y": 0.3167
+          },
+          {
+            "x": 0.0857,
+            "y": 0.35
+          },
+          {
+            "x": 0.1,
+            "y": 0.4167
+          },
+          {
+            "x": 0.1214,
+            "y": 0.45
+          },
+          {
+            "x": 0.1286,
+            "y": 0.5
+          },
+          {
+            "x": 0.1357,
+            "y": 0.5167
+          },
+          {
+            "x": 0.15,
+            "y": 0.55
+          },
+          {
+            "x": 0.1571,
+            "y": 0.6167
+          },
+          {
+            "x": 0.1786,
+            "y": 0.6333
+          },
+          {
+            "x": 0.2,
+            "y": 0.65
+          },
+          {
+            "x": 0.2071,
+            "y": 0.7333
+          },
+          {
+            "x": 0.2214,
+            "y": 0.7667
+          },
+          {
+            "x": 0.2357,
+            "y": 0.8
+          },
+          {
+            "x": 0.3071,
+            "y": 0.85
+          },
+          {
+            "x": 0.35,
+            "y": 0.8667
+          },
+          {
+            "x": 0.3714,
+            "y": 0.8833
+          },
+          {
+            "x": 0.4286,
+            "y": 0.9167
+          },
+          {
+            "x": 0.6143,
+            "y": 0.9333
+          },
+          {
+            "x": 0.6714,
+            "y": 0.9667
+          },
+          {
+            "x": 0.8429,
+            "y": 0.9833
+          },
+          {
+            "x": 1.0,
+            "y": 1.0
+          }
+        ],
+        "pr_curve": [
+          {
+            "x": 1.0,
+            "y": 0.3
+          },
+          {
+            "x": 1.0,
+            "y": 0.3125
+          },
+          {
+            "x": 1.0,
+            "y": 0.3279
+          },
+          {
+            "x": 0.9667,
+            "y": 0.3314
+          },
+          {
+            "x": 0.9667,
+            "y": 0.3473
+          },
+          {
+            "x": 0.9667,
+            "y": 0.3671
+          },
+          {
+            "x": 0.95,
+            "y": 0.38
+          },
+          {
+            "x": 0.9333,
+            "y": 0.3944
+          },
+          {
+            "x": 0.9333,
+            "y": 0.4211
+          },
+          {
+            "x": 0.9167,
+            "y": 0.44
+          },
+          {
+            "x": 0.9167,
+            "y": 0.4701
+          },
+          {
+            "x": 0.9,
+            "y": 0.5
+          },
+          {
+            "x": 0.8667,
+            "y": 0.52
+          },
+          {
+            "x": 0.8167,
+            "y": 0.5326
+          },
+          {
+            "x": 0.8167,
+            "y": 0.5904
+          },
+          {
+            "x": 0.75,
+            "y": 0.6
+          },
+          {
+            "x": 0.65,
+            "y": 0.5821
+          },
+          {
+            "x": 0.6,
+            "y": 0.6207
+          },
+          {
+            "x": 0.5167,
+            "y": 0.62
+          },
+          {
+            "x": 0.45,
+            "y": 0.6429
+          },
+          {
+            "x": 0.35,
+            "y": 0.6364
+          },
+          {
+            "x": 0.3,
+            "y": 0.72
+          },
+          {
+            "x": 0.2167,
+            "y": 0.7647
+          },
+          {
+            "x": 0.1,
+            "y": 0.75
+          },
+          {
+            "x": 0.0,
+            "y": 1.0
+          }
+        ]
+      }
+    },
+    "risk_thresholds": {
+      "medium": 0.2679,
+      "high": 0.5029
+    }
+  },
+  "drift_summary": {
+    "total_features": 10,
+    "high_drift_features": 5,
+    "medium_drift_features": 1,
+    "low_drift_features": 4
+  },
+  "model_health": {
+    "score": 27,
+    "status": "Critical",
+    "high_drift_features": 5,
+    "medium_drift_features": 1,
+    "performance_drop": 0.0333,
+    "high_risk_increase": 0.0571
+  },
+  "risk_summary": {
+    "total_records": 300,
+    "average_default_probability": 0.3228,
+    "low_risk_percentage": 0.44,
+    "medium_risk_percentage": 0.37,
+    "high_risk_percentage": 0.19
+  },
+  "high_risk_prediction_percentage": 0.19,
+  "top_drifted_features": [
+    {
+      "feature_name": "previous_defaults",
+      "feature_type": "numeric",
+      "baseline_mean": 0.6857,
+      "production_mean": 0.91,
+      "mean_difference": 0.2243,
+      "percentage_change": 0.3271,
+      "ks_p_value": 0.003941,
+      "distribution_change": null,
+      "status": "high",
+      "important": true
+    },
+    {
+      "feature_name": "debt_to_income_ratio",
+      "feature_type": "numeric",
+      "baseline_mean": 0.345,
+      "production_mean": 0.44,
+      "mean_difference": 0.095,
+      "percentage_change": 0.2753,
+      "ks_p_value": 0.0,
+      "distribution_change": null,
+      "status": "high",
+      "important": true
+    },
+    {
+      "feature_name": "loan_amount",
+      "feature_type": "numeric",
+      "baseline_mean": 3207.7886,
+      "production_mean": 4020.5639,
+      "mean_difference": 812.7753,
+      "percentage_change": 0.2534,
+      "ks_p_value": 0.000451,
+      "distribution_change": null,
+      "status": "high",
+      "important": true
+    },
+    {
+      "feature_name": "employment_years",
+      "feature_type": "numeric",
+      "baseline_mean": 4.3571,
+      "production_mean": 3.3953,
+      "mean_difference": -0.9618,
+      "percentage_change": -0.2207,
+      "ks_p_value": 0.0,
+      "distribution_change": null,
+      "status": "high",
+      "important": false
+    },
+    {
+      "feature_name": "age",
+      "feature_type": "numeric",
+      "baseline_mean": 35.7529,
+      "production_mean": 33.51,
+      "mean_difference": -2.2429,
+      "percentage_change": -0.0627,
+      "ks_p_value": 0.009206,
+      "distribution_change": null,
+      "status": "high",
+      "important": false
+    }
+  ],
+  "retraining_recommendation": {
+    "retraining_needed": true,
+    "priority": "High",
+    "reasons": [
+      "High drift detected in important features: loan_amount, debt_to_income_ratio, previous_defaults.",
+      "Model health score is below threshold at 27."
+    ],
+    "recommended_action": "Start retraining analysis with the latest production data and compare challenger models."
+  },
+  "key_business_risks": [
+    "Model reliability is critical and should be reviewed before expanding automated use.",
+    "Important borrower characteristics have shifted from the training baseline.",
+    "Retraining is recommended before treating the current model as stable."
+  ],
+  "recommended_next_steps": [
+    "Review high-drift features with credit risk and data owners.",
+    "Create a retraining dataset from recent production records.",
+    "Train challenger models and compare fairness, recall, precision, and ROC-AUC.",
+    "Keep enhanced monitoring active until production data stabilizes."
+  ]
+}
